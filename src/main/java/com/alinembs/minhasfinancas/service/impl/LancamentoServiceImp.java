@@ -86,17 +86,17 @@ public class LancamentoServiceImp implements LancamentoService{
 		}
 		if (lancamento.getUsuario() == null || lancamento.getUsuario().getId() == null)
 		{
-			throw new RegraNegocioException("Informe um Usuario");
+			throw new RegraNegocioException("Informe um Usuario.");
 		}
 		if(lancamento.getValor() == null || lancamento.getValor().compareTo(BigDecimal.ZERO)< 1)
 		{
-			throw new RegraNegocioException("Informe um Valido válido");
+			throw new RegraNegocioException("Informe um Valor válido.");
 			
 		}
 		if(lancamento.getTipo() == null)
 		{
 			
-			throw new RegraNegocioException("Informe um tipo de Lancamento");
+			throw new RegraNegocioException("Informe um tipo de Lancamento.");
 		}
 		
 }
